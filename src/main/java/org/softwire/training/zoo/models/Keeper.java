@@ -18,9 +18,15 @@ public class Keeper<T extends Animal> {
         animal.groom();
     }
 
+    public void stroke(CanBeStroked animal){
+        animal.stroke();
+    }
+
     public void feed(Animal animal) {
         animal.feed();
     }
+
+    public void muck(CanBeMucked animal){animal.muck();}
 
     public List<T> getResponsibleAnimals() {
         return new ArrayList<>(animals);
